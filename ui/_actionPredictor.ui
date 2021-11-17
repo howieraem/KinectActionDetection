@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PyQtKinectDemo</class>
+ <widget class="QMainWindow" name="PyQtKinectDemo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1632</width>
+    <height>990</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>PyQt-Kinect Online Action Predictor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_9">
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="organizationFrame">
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <property name="leftMargin">
+        <number>18</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>18</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="uniLogoLabel">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>97</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>97</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>(UQ logo)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="facultySchoolFrame">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="facultyLabel">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>        Faculty of Engineering, Architecture and Infomation Technology</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="schoolLabel">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>        School of Information Technology and Electrical Engineering</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="verticalFrame">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="appTitleLabel">
+            <property name="font">
+             <font>
+              <pointsize>17</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Real-time Action Detector with Kinect &amp; Neural Network</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>by Junhao Lin</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="streamFrame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>642</width>
+        <height>242</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="rgbWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QVBoxLayout" name="verticalTopLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="rgbTitle">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>RGB Stream</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="rgbLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>640</width>
+              <height>480</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>640</width>
+              <height>480</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+             </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>Not Available</string>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="depthWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="depthTitle">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Depth Stream</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="depthLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>640</width>
+              <height>480</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>640</width>
+              <height>480</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+             </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>Not Available</string>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="verticalWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="actionListTitleLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>List of Available Actions</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="actionListWidget">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>320</width>
+              <height>480</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>320</width>
+              <height>480</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="predictResultFrame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="gridFrame">
+         <layout class="QGridLayout" name="predictionGridLayout">
+          <item row="1" column="0">
+           <widget class="QLabel" name="actionClassTitleLabel">
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>16</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Action Class Prediction</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="actionClassTitleLabel2">
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>16</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Action Class Confidence</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLabel" name="actionEndTitleLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>16</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Action End Confidence</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLabel" name="actionStartTitleLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>16</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Action Start Confidence</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="eventTitleLabel">
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>16</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Event Prediction</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="actionClassNameLabel">
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>24</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>Unknown</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="actionClassConfidenceLabel">
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>24</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>0.00 %</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="eventPredictLabel">
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>24</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>No Action</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLabel" name="actionStartConfidenceLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>24</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>0.00 %</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="actionEndConfidenceLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>24</pointsize>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>0.00 %</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="instructionLabel">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Instructions:&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt; Face the camera. Ensure that your skeleton is detected and mostly displayed on &amp;quot;RGB stream&amp;quot;, then hit &amp;quot;Start&amp;quot;! Try performing an action for longer time or multiple times if not detected. You might need to be idle for a few seconds after the action has been performed to allow the camera calibration. Actions not in &amp;quot;List of Available Actions&amp;quot; will not be detected correctly. Currently no more than two people can be in the scope.  Uncheck &amp;quot;Enable Interaction Actions&amp;quot; if available to detect only actions by one person. Tune &amp;quot;Frame Rate Control&amp;quot; to change how frequently the neural network is oberserving the skeleton movements.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="horizontalFrame">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="predictSettingFrame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>9</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="predictSettingTitleLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>13</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Prediction Control</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="predictSettingWidget" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="recordingFrame">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <layout class="QGridLayout" name="gridLayout">
+                <item row="2" column="0">
+                 <widget class="QComboBox" name="datasetComboBox">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>JL</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>PKU-MMD-CS</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>G3D</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QPushButton" name="stopPredictButton">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Stop</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="startPredictButton">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Start</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QCheckBox" name="interactCheckBox">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Enable Interaction Actions</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="datasetLabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Select Dataset</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="frameRateGridWidget" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <item row="1" column="1">
+                 <widget class="QSlider" name="frameRateSlider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>60</height>
+                   </size>
+                  </property>
+                  <property name="minimum">
+                   <number>0</number>
+                  </property>
+                  <property name="maximum">
+                   <number>200</number>
+                  </property>
+                  <property name="singleStep">
+                   <number>1</number>
+                  </property>
+                  <property name="value">
+                   <number>200</number>
+                  </property>
+                  <property name="sliderPosition">
+                   <number>200</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="frameRateLabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>9</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Frame Rate Control</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="frameRateValueLabel">
+                  <property name="text">
+                   <string>30.00</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="middleButtonFrame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>9</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="sensorControlLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>13</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Sensor Control</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="sensorControlFrame">
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="resumeButton">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Resume Stream</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QPushButton" name="pauseButton">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Pause Stream</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="tiltUpButton">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Tilt Up</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="tiltDownButton">
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Tilt Down</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="resetButton">
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Reset</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1632</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMain">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionInformation"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuMain"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionInformation">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
